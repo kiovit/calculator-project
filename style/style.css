@@ -1,23 +1,33 @@
 html {
     min-height: 100svh;
+    
 }
 
+p{
+    font-size: 33px;
+}
 body{
     display: flex;
+    justify-content: center;
+    
 }
 
 .container{
     display:flex;
     align-items: center;
+    background-color: black;
     flex-direction: column;
-    
-    border-color: black;
+    border-color: rgb(153, 170, 0);
     border-style: solid;
+    border-radius: 3px;
 }
 
 .screen{
+    color: azure;
+    background-color: rgb(61, 61, 75);
     border-color: brown;
     border-style: solid;
+    border-radius: 3px;
     width: 34em;
     height: 10em;
 }
@@ -27,12 +37,13 @@ body{
     display: flex;
     justify-content: center;
     gap: 5px;
+    margin-top: 15px;
 }
 
 .numbers{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 2px;
+    gap: 3px;
 }
 
 .operators{
@@ -40,7 +51,9 @@ body{
     flex-direction: column;
 }
 
-button{
+button{    
+    color: azure;
+    background-color: rgb(61, 61, 75);
     width: 10em;
-    height: 5em;
+    height: 8em;
 }
