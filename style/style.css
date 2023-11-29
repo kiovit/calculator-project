@@ -1,0 +1,46 @@
+html {
+    min-height: 100svh;
+}
+
+body{
+    display: flex;
+}
+
+.container{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    
+    border-color: black;
+    border-style: solid;
+}
+
+.screen{
+    border-color: brown;
+    border-style: solid;
+    width: 34em;
+    height: 10em;
+}
+
+
+.pad{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.numbers{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2px;
+}
+
+.operators{
+    display:flex;
+    flex-direction: column;
+}
+
+button{
+    width: 10em;
+    height: 5em;
+}
