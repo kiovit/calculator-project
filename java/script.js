@@ -1,21 +1,28 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const container = document.querySelector('.container');
-    const resizeHandle = document.querySelector('.resize-handle');
-    let isResizing = false;
+let numberA = 0;
+let numberB = 0;
+let operator = "";
+let displayResult = 0;
 
-    resizeHandle.addEventListener('mousedown', function (e) {
-        isResizing = true;
-        document.addEventListener('mousemove', handleMouseMove);
-        document.addEventListener('mouseup', () => {
-            isResizing = false;
-            document.removeEventListener('mousemove', handleMouseMove);
-        });
-    });
+const result = document.querySelector("p");
+result.textContent = displayResult;
 
-    function handleMouseMove(e) {
-        if (isResizing) {
-            container.style.width = e.clientX - container.offsetLeft + 'px';
-            container.style.height = e.clientY - container.offsetTop + 'px';
-        }
-    }
-});
+function add(numberA,numberB){
+    displayResult = numberA + numberB;
+    result.textContent = displayResult;
+   
+}
+
+function subtract(numberA,numberB){
+    displayResult = numberA - numberB;
+    result.textContent = displayResult;
+}
+
+function multiply(numberA,numberB){
+    displayResult = numberA * numberB;
+    result.textContent = displayResult;
+}
+
+function divide(numberA,numberB){
+    displayResult = numberA / numberB;
+    result.textContent = displayResult;
+ }
