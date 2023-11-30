@@ -6,23 +6,41 @@ let displayResult = 0;
 const result = document.querySelector("p");
 result.textContent = displayResult;
 
-function add(numberA,numberB){
+function add(){
     displayResult = numberA + numberB;
     result.textContent = displayResult;
-   
 }
 
-function subtract(numberA,numberB){
+function subtract(){
     displayResult = numberA - numberB;
     result.textContent = displayResult;
 }
 
-function multiply(numberA,numberB){
+function multiply(){
     displayResult = numberA * numberB;
     result.textContent = displayResult;
 }
 
-function divide(numberA,numberB){
-    displayResult = numberA / numberB;
-    result.textContent = displayResult;
+function divide(){
+    if (numberB !== 0) {
+        displayResult = numberA / numberB;
+        result.textContent = displayResult;
+    } else {
+        displayResult = "Error";
+        result.textContent = displayResult;
+    }
+}
+
+
+ function operate(){
+    if (operator === "+"){
+        add();
+    }else if (operator === "-"){ 
+    subtract();
+    }else if (operator === "*"){ 
+    multiply();
+    }else if (operator === "/"){
+    divide();
+    }
  }
+ operate();
