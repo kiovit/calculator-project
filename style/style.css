@@ -11,9 +11,16 @@ html {
 
 body{
     display: flex;
-    justify-content: center;    
+    align-items:center;
+    justify-content: center; 
+    background-color: black;   
 }
-
+h1{
+    color:yellow;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
 .userInput{
     font-size: 3rem;
     margin:0;
@@ -26,7 +33,7 @@ p{
 .container{
     display: flex;
     align-items: center;
-    background-color: black;
+    background-color: yellow;
     flex-direction: column;
     border-color: rgb(0, 108, 170);
     border-style: solid;
