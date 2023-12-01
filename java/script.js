@@ -26,7 +26,6 @@ function recordInput(value){
 function equalButton(input){
     const stringIndex = input.findIndex(item => typeof item === 'string' && item !='.');
     if (stringIndex === -1) {
-      // If there's no string, return the original array
       return {
         numberA: input,
         numberB: []
