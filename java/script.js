@@ -26,8 +26,8 @@ function recordInput(value){
 function removeNumber(){
   if (input.length > 0) {
     input.pop();
-    userInput.textContent = input.join("");
-  }
+    userInput.textContent = input.length > 0 ? input.join("") : "0";
+      }
  } 
 
 function equalButton(input){
