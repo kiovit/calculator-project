@@ -23,6 +23,13 @@ function recordInput(value){
   userInput.textContent = input.join("");
 }
 
+function removeNumber(){
+  if (input.length > 0) {
+    input.pop();
+    userInput.textContent = input.join("");
+  }
+ } 
+
 function equalButton(input){
     const stringIndex = input.findIndex(item => typeof item === 'string' && item !='.');
     if (stringIndex === -1) {
