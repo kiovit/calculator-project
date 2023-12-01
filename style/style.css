@@ -2,10 +2,18 @@ html {
     min-height: 100svh; 
 }
 
+@media screen and (max-width: 600px) {
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
 body{
     display: flex;
     justify-content: center;    
 }
+
 .userInput{
     font-size: 3rem;
     margin:0;
