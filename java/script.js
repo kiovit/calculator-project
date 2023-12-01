@@ -82,7 +82,7 @@ function divide(){
 
  function operate(operator){
     if (operator === "+"){
-        add();
+    add();
     }else if (operator === "-"){ 
     subtract();
     }else if (operator === "x"){ 
@@ -96,4 +96,13 @@ function divide(){
     result.textContent = displayResult;
     userInput.textContent = 0;    
 };
- 
+
+function easterEggStart(){
+if (input.join("") == 1970){
+  let body = document.querySelector("body");
+  let easterEgg = document.createElement("div");
+  easterEgg.className = "easterEgg";
+  easterEgg.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/UZiTr4hwHXI?si=B8fzYe58iLL3vWBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';   
+  body.appendChild(easterEgg);
+}
+}
