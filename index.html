@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="eng">
-    <head>
-        <meta= charset="UTF-8">
+
+<head>
+    <meta= charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="./style/style.css">
         <script defer src="./java/script.js"></script>
         <title>Calculator</title>
-    </head>
-    <body>
-        <div class="container">
-            <div class="screen"><p></p></div>
-            <div class="pad">
-                <div class="numbers">
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <button>4</button>
-                    <button>5</button>
-                    <button>6</button>
-                    <button>7</button>
-                    <button>8</button>
-                    <button>9</button>
-                    <button>0</button>
-                    <button>.</button>
-                    <button>DEL</button>
-                </div>
-                <div class="operators">
-                    <button id="clear">CLEAR</button>
-                    <button>+</button>
-                    <button>-</button>
-                    <button>*</button>
-                    <button>/</button>
-                    <button id="equal">=</button>
-                </div>
+</head>
+
+<body>
+    <div class="container">
+        <div class="screen">
+            <p></p>
+            <p class="userInput"></p>
+        </div>
+        <div class="pad">
+            <div class="numbers">
+                <button onclick="recordInput(1)">1</button>
+                <button onclick="recordInput(2)">2</button>
+                <button onclick="recordInput(3)">3</button>
+                <button onclick="recordInput(4)">4</button>
+                <button onclick="recordInput(5)">5</button>
+                <button onclick="recordInput(6)">6</button>
+                <button onclick="recordInput(7)">7</button>
+                <button onclick="recordInput(8)">8</button>
+                <button onclick="recordInput(9)">9</button>
+                <button onclick="recordInput(0)">0</button>
+                <button onclick="recordInput('.')">.</button>
+                <button>DEL</button>
+            </div>
+            <div class="operators">
+                <button onclick="clearCalculator()" id="clear">CLEAR</button>
+                <button onclick="recordInput('+')">+</button>
+                <button onclick="recordInput('-')">-</button>
+                <button onclick="recordInput('*')">*</button>
+                <button onclick="recordInput('/')">/</button>
+                <button id="equal" onclick="equalButton(input)" >=</button>
             </div>
         </div>
-        </body>
+    </div>
+</body>

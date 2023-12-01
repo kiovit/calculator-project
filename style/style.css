@@ -6,7 +6,10 @@ body{
     display: flex;
     justify-content: center;    
 }
-
+.userInput{
+    font-size: 3rem;
+    margin:0;
+}
 p{
     display: flex;
     font-size: 5rem;
@@ -30,7 +33,8 @@ p{
 
 .screen{
     display:flex;
-    justify-content: flex-end;
+    flex-direction: column-reverse;
+    align-items: flex-end;
     color: azure;
     background-color: rgb(61, 61, 75);
     border-color: rgb(0, 108, 170);
