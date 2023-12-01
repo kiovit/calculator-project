@@ -106,3 +106,5 @@ if (input.join("") == 1970){
   body.appendChild(easterEgg);
 }
 }
+
+alert("There's an easter egg hidden in this page.\n They are robots yet sing about love and models.\n To unlock the easter egg type the year of foundation of the band and press =")
