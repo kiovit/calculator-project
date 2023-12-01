@@ -85,7 +85,7 @@ function divide(){
         add();
     }else if (operator === "-"){ 
     subtract();
-    }else if (operator === "*"){ 
+    }else if (operator === "x"){ 
     multiply();
     }else if (operator === "/"){
     divide();
