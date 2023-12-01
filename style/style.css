@@ -9,27 +9,38 @@ html {
     }
   }
 
-body{
+body{    
     display: flex;
-    align-items:center;
-    justify-content: center; 
+    justify-content: center;
     background-color: black;   
 }
+.wrapper{
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+}
+
 h1{
+    display:flex;
+    flex-direction: column;
+    font-size: 160%;
+    margin: 5px;
     color:yellow;
-    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
-}
+   }
+ 
 .userInput{
     font-size: 3rem;
     margin:0;
 }
+
 p{
     display: flex;
     font-size: 5rem;
     margin:0;
 }
+
 .container{
     display: flex;
     align-items: center;
@@ -38,8 +49,7 @@ p{
     border-color: rgb(0, 108, 170);
     border-style: solid;
     border-radius: 3px;
-    width: 100%;
-    height: 100%;
+    width: 100%;    
     padding: 10px;
     box-sizing: border-box; 
     overflow: hidden;
@@ -84,6 +94,7 @@ p{
     gap: 3px;
     height: 100%;
 }
+
 #clear{
     font-size: 1rem;
     background-color: rgb(220, 7, 7);
@@ -98,6 +109,7 @@ p{
     background-color: azure;
     color:black;
 }
+
 button{    
     font-size: 2rem;
     color: azure;

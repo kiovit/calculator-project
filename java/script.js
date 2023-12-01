@@ -55,40 +55,24 @@ function equalButton(input){
         operate(operator);
       }
  
-function add(){
-    displayResult = numberA + numberB;
-    result.textContent = displayResult;
-}
-
-function subtract(){
-    displayResult = numberA - numberB;
-    result.textContent = displayResult;
-}
-
-function multiply(){
-    displayResult = numberA * numberB;
-    result.textContent = displayResult;
-}
-
-function divide(){
-    if (numberB !== 0) {
+ function operate(operator){
+    if (operator === "+"){
+      displayResult = numberA + numberB;
+      result.textContent = displayResult;
+    }else if (operator === "-"){ 
+      displayResult = numberA - numberB;
+      result.textContent = displayResult;
+    }else if (operator === "x"){ 
+      displayResult = numberA * numberB;
+      result.textContent = displayResult;
+    }else if (operator === "/"){
+      if (numberB !== 0) {
         displayResult = numberA / numberB;
         result.textContent = displayResult.toFixed(2);
     } else {
         displayResult = "Error";
-        result.textContent = displayResult.toFixed(2);
+        result.textContent = displayResult;
     }
-}
-
- function operate(operator){
-    if (operator === "+"){
-    add();
-    }else if (operator === "-"){ 
-    subtract();
-    }else if (operator === "x"){ 
-    multiply();
-    }else if (operator === "/"){
-    divide();
     }
  }
 
@@ -110,4 +94,5 @@ if (!easterEggAppended && input.join("") == 1970){
 }
 }
 
-alert("There's an easter egg hidden in this page.\n They are robots yet sing about love and models.\n To unlock the easter egg type the year the band was formed and press =")
+//alert("There's an easter egg hidden in this page.\n They are robots yet sing about love and models."
+//+"\n To unlock the easter egg type the year the band was formed and press =")
