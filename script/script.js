@@ -4,29 +4,27 @@ let displayResult = "";
 let num1 = "";
 let num2 = "";
 let operator = "";
-
 // Set DOM elements
 const result = document.querySelector(".resultDisplay");
 const userInputDisplay = document.querySelector(".userInputDisplay");
 userInputDisplay.textContent = 0;
 result.textContent = 0;
-
+// Clear calculator when you want to start fresh
 function clearCalculator() {
     userInput = "";
     displayResult = "";
     num1 = "";
     num2 = "";
-    num3 = "";
     operator = "";
     userInputDisplay.textContent = 0;
     result.textContent = 0;
 }
-
+//Gets input from user 
 function recordInput() {
     userInput = num1 + " " + operator + " " + num2;
     userInputDisplay.textContent = userInput;
 }
-
+//Processes user input to be passed to calculate function
 function getNumber(value) {
     if (value === "." && (operator === "" ? !num1.includes(".") : !num2.includes("."))) {
         if (operator === "") {
@@ -49,11 +47,9 @@ function getOperator(value) {
       num1 = displayResult;
       displayResult = "";
   }
-
   if (num1 !== "" && num2 !== "") {
       operate();
   }
-
   operator = value;
   recordInput();
 }
