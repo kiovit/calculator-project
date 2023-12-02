@@ -53,6 +53,19 @@ function getOperator(value) {
   operator = value;
   recordInput();
 }
+//Delete button
+function removeNumber(){
+   if (operator === "") {
+      num1 = num1.slice(0, -1);
+   }else if (operator !== "" && num2 !== ""){
+      num2 = num2.slice(0, -1);
+   }
+   else if (operator !== "" && num2 === "") {
+      operator = operator.slice(0, -1);
+   };
+   
+   recordInput();
+}
 //Set of operations
 function add(num1, num2) {
     return num1 + num2;
