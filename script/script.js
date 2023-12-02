@@ -41,7 +41,7 @@ function getNumber(value) {
     }
     recordInput();
 }
-
+//Processes user input to get the type of operator
 function getOperator(value) {
    if (displayResult !== "") {
       num1 = displayResult;
@@ -53,7 +53,7 @@ function getOperator(value) {
   operator = value;
   recordInput();
 }
-
+//Set of operations
 function add(num1, num2) {
     return num1 + num2;
 }
@@ -69,12 +69,11 @@ function multiply(num1, num2) {
 function divide(num1, num2) {
     return num2 !== 0 ? num1 / num2 : "Error";
 }
-
+//Operation evaluates the proper operation to use depending on the operator
 function operate() {
     switch (operator) {
         case "+":
             displayResult = add(parseFloat(num1), parseFloat(num2));
-            console.log(displayResult);
             break;
         case "-":
             displayResult = subtract(parseFloat(num1), parseFloat(num2));
@@ -95,10 +94,8 @@ function operate() {
     result.textContent = displayResult;
     userInputDisplay.textContent = num1;
 }
-
 // Easter egg
 let easterEggAppended = false;
-
 function easterEggStart() {
     if (!easterEggAppended && userInput == 1970) {
         let body = document.querySelector("body");
