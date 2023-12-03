@@ -23,8 +23,6 @@ function clearCalculator() {
    result.textContent = 0;
    result.style.color = "";
    result.style.fontSize = "";
-   userInputDisplay.style.color = "";
-   userInputDisplay.style.fontSize = "";
 }
 
 // Gets input from the user 
@@ -66,13 +64,13 @@ function getOperator(value) {
 
 // Delete button
 function removeNumber() {
-      if (operator === "") {
+      if (operator === "" && num1.length !== 0) {
          num1 = num1.slice(0, -1);
       } else if (operator !== "" && num2 !== "") {
          num2 = num2.slice(0, -1);
       } else if (operator !== "" && num2 === "") {
          operator = operator.slice(0, -1);
-      }
+      }    
       recordInput();
 }
 
