@@ -75,6 +75,7 @@ function removeNumber() {
 //Keyboard funcitonality
 function handleKeyPress(event) {
    const key = event.key;
+   
    if (!isNaN(key) || key === ".") {
       getNumber(key);
    } else if (["+", "-", "x", "/"].includes(key)) {
