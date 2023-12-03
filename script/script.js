@@ -143,14 +143,9 @@ function operate() {
    if (displayResult === "Cannot divide by zero") {
       result.style.color = "red";
       result.style.fontSize = "2rem";
-      userInputDisplay.style.color = "red";
-      userInputDisplay.style.fontSize = "2rem";
-   }
-   else {
-      result.style.color = "";
-      result.style.fontSize = "";
-      userInputDisplay.style.color = "";
-      userInputDisplay.style.fontSize = "";
+      num1 = "";
+      //Clears calculator after 3 seconds of error message
+      setTimeout(clearCalculator, 3000);
    }
    userInputDisplay.textContent = num1.toLocaleString();
 }
