@@ -115,24 +115,25 @@ function divide(num1, num2) {
 
 // Operation evaluates the proper operation to use depending on the operator
 function operate() {
-   switch (operator) {
-      case "+":
-         displayResult = add(parseFloat(num1), parseFloat(num2));
-         break;
-      case "-":
-         displayResult = subtract(parseFloat(num1), parseFloat(num2));
-         break;
-      case "x":
-         displayResult = multiply(parseFloat(num1), parseFloat(num2));
-         break;
-      case "÷":
-         if (parseFloat(num2) !== 0) {
-            displayResult = divide(parseFloat(num1), parseFloat(num2));
-         } else {
-            displayResult = "Cannot divide by zero";
-         }
-         break;
-   }
+   if (num1 !== "" && num2 !== "" && operator !== ""){
+      switch (operator) {
+         case "+":
+            displayResult = add(parseFloat(num1), parseFloat(num2));
+            break;
+         case "-":
+            displayResult = subtract(parseFloat(num1), parseFloat(num2));
+            break;
+         case "x":
+            displayResult = multiply(parseFloat(num1), parseFloat(num2));
+            break;
+         case "÷":
+            if (parseFloat(num2) !== 0) {
+               displayResult = divide(parseFloat(num1), parseFloat(num2));
+            } else {
+               displayResult = "Cannot divide by zero";
+            }
+            break;            
+      }
    if (displayResult !== "Cannot divide by zero" && displayResult % 1 !== 0) {
       displayResult = parseFloat(displayResult).toFixed(2);
    }
@@ -148,6 +149,7 @@ function operate() {
       setTimeout(clearCalculator, 3000);
    }
    userInputDisplay.textContent = num1.toLocaleString();
+}
 }
 
 // Easter egg
