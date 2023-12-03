@@ -78,7 +78,7 @@ function handleKeyPress(event) {
    
    if (!isNaN(key) || key === ".") {
       getNumber(key);
-   } else if (["+", "-", "x", "/"].includes(key)) {
+   } else if (["+", "-", "x", "÷"].includes(key)) {
       getOperator(key);
    } else if (key === "Enter" || key === "=") {
       operate();
@@ -118,7 +118,7 @@ function operate() {
       case "x":
          displayResult = multiply(parseFloat(num1), parseFloat(num2));
          break;
-      case "/":
+      case "÷":
          if (num2 !== 0) {
             displayResult = divide(parseFloat(num1), parseFloat(num2));
          } else {
