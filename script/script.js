@@ -21,6 +21,10 @@ function clearCalculator() {
    operator = "";
    userInputDisplay.textContent = 0;
    result.textContent = 0;
+   result.style.color = "";
+   result.style.fontSize = "";
+   userInputDisplay.style.color = "";
+   userInputDisplay.style.fontSize = "";
 }
 
 // Gets input from the user 
@@ -68,14 +72,17 @@ function removeNumber() {
       num2 = num2.slice(0, -1);
    } else if (operator !== "" && num2 === "") {
       operator = operator.slice(0, -1);
-   };
+   }
+   else
+      userInputDisplay.textContent = 0;
+
    recordInput();
 }
 
 //Keyboard funcitonality
 function handleKeyPress(event) {
    const key = event.key;
-   
+
    if (!isNaN(key) || key === ".") {
       getNumber(key);
    } else if (["+", "-", "x", "÷"].includes(key)) {
@@ -84,7 +91,7 @@ function handleKeyPress(event) {
       operate();
    } else if (key === "Backspace") {
       removeNumber();
-   } else if (key === "Escape","Delete") {
+   } else if (key === "Escape", "Delete") {
       clearCalculator();
    }
 }
@@ -119,20 +126,32 @@ function operate() {
          displayResult = multiply(parseFloat(num1), parseFloat(num2));
          break;
       case "÷":
-         if (num2 !== 0) {
+         if (parseFloat(num2) !== 0) {
             displayResult = divide(parseFloat(num1), parseFloat(num2));
          } else {
-            displayResult = "Error";
+            displayResult = "Cannot divide by zero";
          }
          break;
    }
-   if (displayResult !== "Error" && displayResult % 1 !== 0) {
+   if (displayResult !== "Cannot divide by zero" && displayResult % 1 !== 0) {
       displayResult = parseFloat(displayResult).toFixed(2);
    }
    num1 = displayResult;
    num2 = "";
    operator = "";
    result.textContent = displayResult.toLocaleString();
+   if (displayResult === "Cannot divide by zero") {
+      result.style.color = "red";
+      result.style.fontSize = "2rem";
+      userInputDisplay.style.color = "red";
+      userInputDisplay.style.fontSize = "2rem";
+   }
+   else {
+      result.style.color = "";
+      result.style.fontSize = "";
+      userInputDisplay.style.color = "";
+      userInputDisplay.style.fontSize = "";
+   }
    userInputDisplay.textContent = num1.toLocaleString();
 }
 
