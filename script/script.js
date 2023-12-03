@@ -79,7 +79,7 @@ function multiply(num1, num2) {
 }
 
 function divide(num1, num2) {
-   return parseFloat(num2) !== 0 ? parseFloat(num1) / parseFloat(num2) : "Error";
+   return num2 !== 0 ? parseFloat(num1) / parseFloat(num2) : "Error";
 }
 //Operation evaluates the proper operation to use depending on the operator
 function operate() {
@@ -99,7 +99,7 @@ function operate() {
    }
    if (displayResult % 1 !== 0) {
       displayResult = parseFloat(displayResult).toFixed(2);
-   }
+      }
    num1 = displayResult;
    num2 = "";
    operator = "";
