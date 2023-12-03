@@ -66,17 +66,14 @@ function getOperator(value) {
 
 // Delete button
 function removeNumber() {
-   if (operator === "") {
-      num1 = num1.slice(0, -1);
-   } else if (operator !== "" && num2 !== "") {
-      num2 = num2.slice(0, -1);
-   } else if (operator !== "" && num2 === "") {
-      operator = operator.slice(0, -1);
-   }
-   else
-      userInputDisplay.textContent = 0;
-
-   recordInput();
+      if (operator === "") {
+         num1 = num1.slice(0, -1);
+      } else if (operator !== "" && num2 !== "") {
+         num2 = num2.slice(0, -1);
+      } else if (operator !== "" && num2 === "") {
+         operator = operator.slice(0, -1);
+      }
+      recordInput();
 }
 
 //Keyboard funcitonality
